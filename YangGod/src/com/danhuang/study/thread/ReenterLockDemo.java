@@ -19,6 +19,9 @@ class Phone implements Runnable {
     }
 
     public void get() {
+        /**
+         * 可嵌套多重锁，只要释放锁的数量和锁的数量一致即可
+         */
         lock.lock();
         lock.lock();
         try{
